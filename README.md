@@ -116,8 +116,11 @@ arena
   .then(block => console.log(block.title))
   .catch(console.error);
 
-// Create a block in the channel 'great-websites'
-arena.block().create("great-websites", "https://are.na/");
+// Create a link block in the channel 'great-websites'
+arena.block().create("great-websites", {source: "https://are.na/", title: Arena});
+
+// Create a text block in the channel 'great-websites'
+arena.block().create("great-websites", {content: "content", title: "title"});
 
 // Update a block
 arena.block("65234").update({
